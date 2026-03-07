@@ -248,6 +248,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo-img {
+            height: 32px;
+            width: auto;
         }
 
         .nav-links {
@@ -534,7 +542,7 @@
         .marquee-item {
             font-size: clamp(1rem, 2vw, 1.5rem);
             font-weight: 700;
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.55);
             white-space: nowrap;
             padding: 0 2rem;
             display: flex;
@@ -1146,7 +1154,7 @@
          ======================================== -->
     <nav class="nav" id="nav">
         <div class="container nav-inner">
-            <a href="#" class="nav-logo">ClearFlow</a>
+            <a href="#" class="nav-logo"><img src="Bilder-Website/ClearFlow-Logo.png" alt="ClearFlow Logo" class="nav-logo-img">ClearFlow</a>
             <div class="nav-links">
                 <a href="#problem">Problem</a>
                 <a href="#solution">Solution</a>
