@@ -390,6 +390,17 @@
             background-clip: text;
         }
 
+        /* US-Flaggen-Farben für "America's First" */
+        .us-flag-text {
+            background: linear-gradient(90deg,
+                #B22234 0%, #B22234 30%,
+                #FFFFFF 30%, #FFFFFF 50%,
+                #3C3B6E 50%, #3C3B6E 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
         .hero-subtitle {
             font-size: clamp(1rem, 1.3vw, 1.125rem);
             color: var(--text-secondary);
@@ -1158,7 +1169,7 @@
             <div class="hero-content">
                 <span class="hero-tag" data-reveal>Introducing ClearFlow</span>
                 <h1 data-reveal data-reveal-delay="1">
-                    America's First<br>
+                    <span class="us-flag-text">America's First</span><br>
                     <span class="gradient-text">Portable Microplastic</span><br>
                     Filter
                 </h1>
