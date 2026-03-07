@@ -612,10 +612,21 @@
 
         .problem-statement {
             margin-top: 2.5rem;
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--accent);
-            line-height: 1.5;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.3;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            transition: filter var(--transition), text-shadow var(--transition);
+            cursor: default;
+        }
+
+        .problem-statement:hover {
+            filter: brightness(1.3);
+            text-shadow: 0 0 30px rgba(0, 200, 255, 0.4);
         }
 
         /* ========================================
