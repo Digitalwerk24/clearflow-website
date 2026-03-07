@@ -1540,7 +1540,12 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" data-reveal data-reveal-delay="3">
+                <form class="contact-form" id="contactForm" action="https://formsubmit.co/info@revis-1.com" method="POST" data-reveal data-reveal-delay="3">
+                    <!-- Spam-Schutz & Einstellungen -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="New ClearFlow Inquiry">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="_honey" style="display:none">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="John Doe" required>
@@ -1724,23 +1729,7 @@
             counters.forEach(function(el) { observer.observe(el); });
         })();
 
-        /* Kontaktformular – öffnet E-Mail-Client */
-        (function initContactForm() {
-            var form = document.getElementById('contactForm');
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                var name = form.querySelector('#name').value;
-                var email = form.querySelector('#email').value;
-                var message = form.querySelector('#message').value;
-                var subject = encodeURIComponent('ClearFlow Inquiry from ' + name);
-                var body = encodeURIComponent(
-                    'Name: ' + name + '\n' +
-                    'Email: ' + email + '\n\n' +
-                    'Message:\n' + message
-                );
-                window.location.href = 'mailto:info@revis-1.com?subject=' + subject + '&body=' + body;
-            });
-        })();
+        /* Kontaktformular – wird über Formsubmit.co verarbeitet */
 
         /* Smooth Scroll für Anker-Links */
         document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
