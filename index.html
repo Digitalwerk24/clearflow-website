@@ -776,21 +776,17 @@
 
         .founder-image {
             aspect-ratio: 4 / 5;
-            background: linear-gradient(135deg, rgba(0, 200, 255, 0.08), rgba(0, 60, 120, 0.15));
             border-radius: var(--radius);
             border: 1px solid var(--border-subtle);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
             position: relative;
         }
 
-        .founder-initials {
-            font-size: 5rem;
-            font-weight: 900;
-            color: rgba(0, 200, 255, 0.12);
-            letter-spacing: -0.03em;
+        .founder-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .founder-info h3 {
@@ -1396,7 +1392,7 @@
 
             <div class="founder-grid">
                 <div class="founder-image" data-reveal data-reveal-delay="2">
-                    <span class="founder-initials">MH</span>
+                    <img src="founder.jpeg" alt="Manuel Horn – Founder & CEO of ClearFlow" loading="lazy">
                 </div>
                 <div class="founder-info" data-reveal data-reveal-delay="3">
                     <h3>Manuel Horn</h3>
