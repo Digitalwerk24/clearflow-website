@@ -386,9 +386,8 @@
            ======================================== */
         .featured-article {
             display: grid;
-            grid-template-columns: 1.1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            grid-template-columns: 1fr;
+            gap: 2rem;
             padding: 2rem;
             background: var(--bg-card);
             border: 1px solid var(--border-subtle);
@@ -404,11 +403,12 @@
 
         .featured-img {
             width: 100%;
-            aspect-ratio: 16 / 10;
             background: var(--bg-tertiary);
             border-radius: var(--radius-sm);
             overflow: hidden;
             position: relative;
+            display: flex;
+            justify-content: center;
         }
 
         .featured-img .img-placeholder {
@@ -843,7 +843,7 @@
     <div class="container">
         <a href="blog/microplastics-prostate-cancer-study.html" class="featured-article" data-reveal data-category="health">
             <div class="featured-img">
-                <img src="Bilder-Website/microplastic-petri-dish.jpeg" alt="Microplastic particles in a petri dish — microscopic contamination found in human tissue" style="width:100%;height:100%;object-fit:cover;">
+                <img src="Bilder-Website/microplastic-petri-dish.jpeg" alt="Microplastic particles in a petri dish — microscopic contamination found in human tissue" style="max-width:100%;max-height:420px;object-fit:contain;border-radius:var(--radius-sm);">
             </div>
             <div class="featured-content">
                 <span class="featured-badge">New Study</span>
