@@ -1238,13 +1238,45 @@
             padding-top: 2rem;
             border-top: 1px solid var(--border-subtle);
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            gap: 1rem;
+            text-align: center;
         }
 
         .footer-bottom p {
             font-size: 0.8rem;
             color: var(--text-muted);
+        }
+
+        .footer-credit-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.35rem 0.8rem;
+            background: rgba(0, 200, 255, 0.06);
+            border: 1px solid rgba(0, 200, 255, 0.12);
+            border-radius: 100px;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .footer-credit-badge:hover {
+            background: rgba(0, 200, 255, 0.1);
+            border-color: rgba(0, 200, 255, 0.25);
+            color: var(--accent);
+        }
+
+        .footer-credit-badge svg {
+            width: 12px;
+            height: 12px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         /* ========================================
@@ -1363,6 +1395,7 @@
                 <a href="#solution">Solution</a>
                 <a href="#how-it-works">How It Works</a>
                 <a href="#about">About</a>
+                <a href="blog.html">Blog</a>
                 <a href="#contact">Contact</a>
             </div>
             <a href="mailto:info@revis-1.com" class="nav-cta">Contact Us</a>
@@ -1378,6 +1411,7 @@
         <a href="#solution">Solution</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#about">About</a>
+        <a href="blog.html">Blog</a>
         <a href="#contact">Contact</a>
         <a href="mailto:info@revis-1.com" class="btn-primary" style="margin-top:1rem;">Contact Us</a>
     </div>
@@ -1795,8 +1829,14 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Revis-1 LLC. All rights reserved.</p>
-                <p>ClearFlow is a product of Revis-1 LLC, Weston, FL</p>
+                <div>
+                    <p>&copy; 2026 Revis-1 LLC. All rights reserved.</p>
+                    <p style="margin-top: 0.3rem;">ClearFlow is a product of Revis-1 LLC, Weston, FL</p>
+                </div>
+                <a href="https://www.digitalwerk24.com" target="_blank" rel="noopener" class="footer-credit-badge">
+                    <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Website created by Digitalwerk24 — Web Design &amp; Google Ads for SMBs
+                </a>
             </div>
         </div>
     </footer>
