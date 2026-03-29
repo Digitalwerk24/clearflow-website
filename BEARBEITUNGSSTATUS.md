@@ -31,6 +31,17 @@
 - **HTTP:** Funktioniert ✅
 - **HTTPS/SSL:** Vercel erstellt Zertifikat automatisch (kann bis zu 1h dauern) ⏳
 
+## Änderungen (15.03.2026)
+
+### ✅ Digitalwerk24 Backlink im Footer
+- **Datei:** `index.html`, `.footer-credit-badge`
+- Badge-Style Link unter dem Copyright im Footer
+- Text: „Website created by Digitalwerk24 — Web Design & Google Ads for SMBs"
+- Link: `https://www.digitalwerk24.com` (target="_blank", rel="noopener")
+- Pill-Design mit Cyan-Border, Hover-Effekt (Farbe + Border heller)
+- **Zweck:** SEO-Backlink für digitalwerk24.com
+- **Status:** Live ✅
+
 ## Offene Punkte
 - ⏳ SSL-Zertifikat für `itsclearflow.com` (Vercel automatisch, abwarten)
 - 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-q.com` einrichten (noch nicht umgesetzt)
