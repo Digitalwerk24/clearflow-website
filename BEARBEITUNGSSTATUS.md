@@ -42,6 +42,15 @@
 - **Zweck:** SEO-Backlink für digitalwerk24.com
 - **Status:** Live ✅
 
+## Änderungen (29.03.2026)
+
+### ✅ Revis-1 LLC SEO-Link
+- **Datei:** `index.html`, Contact-Sektion (Company)
+- "Revis-1 LLC®" verlinkt auf `https://www.revis-1.com` (target="_blank", rel="noopener")
+- Hover-Effekt: Schrift leuchtet blau auf (#00b4d8) mit sanftem Übergang (0.3s)
+- **Zweck:** SEO-Backlink für revis-1.com
+- **Status:** Live ✅
+
 ## Offene Punkte
 - ⏳ SSL-Zertifikat für `itsclearflow.com` (Vercel automatisch, abwarten)
 - 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-q.com` einrichten (noch nicht umgesetzt)
