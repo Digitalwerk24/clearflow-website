@@ -913,7 +913,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     grid-template-columns: 1fr auto;
     gap: 2rem;
     align-items: center;
-    margin: clamp(3rem, 6vw, 5rem) 0;
+    margin: clamp(3rem, 6vw, 5rem) 0 0;
 }
 .cta-band h2 {
     font-size: clamp(1.6rem, 3vw, 2.2rem);
