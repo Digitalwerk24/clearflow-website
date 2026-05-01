@@ -396,26 +396,25 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-inner { min-height: auto; padding-bottom: 8rem; }
 }
 
-/* Mobile: eigener Portrait-Crop mit zentriertem Filter, Bild füllt Hero komplett */
+/* Mobile: extendierter Crop mit Sky oben, Flasche unten — Bild füllt Hero komplett */
 @media (max-width: 720px) {
     .hero {
         background-image: url("Bilder-Website/clearflow-hero-mobile.png");
         background-size: cover;
-        background-position: center;
+        background-position: center 35%;
     }
     .hero::before {
-        /* Sanfter Top-Gradient — Text oben lesbar, Filter-Bereich unverdeckt sichtbar */
+        /* Subtiler Top-Gradient für Text-Lesbarkeit, Flasche bleibt unten frei */
         background: linear-gradient(180deg,
-            rgba(231, 244, 251, 0.95) 0%,
-            rgba(231, 244, 251, 0.78) 28%,
-            rgba(231, 244, 251, 0.35) 48%,
-            transparent 70%);
+            rgba(231, 244, 251, 0.7) 0%,
+            rgba(231, 244, 251, 0.35) 30%,
+            transparent 50%);
     }
     .hero-inner {
         align-items: flex-start;
         padding-top: 1.5rem;
-        padding-bottom: 7rem;
-        min-height: 80vh;
+        padding-bottom: 2rem;
+        min-height: 100vh;
     }
 }
 
