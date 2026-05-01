@@ -354,6 +354,18 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* US-Flagge: 3-3-3 Buchstaben in Rot, Weiß, Blau (inkl. Apostroph) */
+.us-flag { white-space: nowrap; }
+.us-red   { color: #b22234; }
+.us-white {
+    color: #ffffff;
+    -webkit-text-stroke: 1.5px #0f1720;
+    text-stroke: 1.5px #0f1720;
+    text-shadow: 0 2px 4px rgba(15, 23, 32, 0.25);
+    paint-order: stroke fill;
+}
+.us-blue  { color: #3c3b6e; }
 .hero-subtitle {
     color: var(--text-muted);
     font-size: 1rem;
