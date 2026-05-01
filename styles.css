@@ -396,36 +396,26 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-inner { min-height: auto; padding-bottom: 8rem; }
 }
 
-/* Mobile: 3 Zonen — Text (solid) / Bild (frei und vollständig) / Buttons (solid) */
+/* Mobile: eigener Portrait-Crop mit zentriertem Filter, Bild füllt Hero komplett */
 @media (max-width: 720px) {
     .hero {
-        background-position: 50% 72%;
-        background-size: 115% auto;
+        background-image: url("Bilder-Website/clearflow-hero-mobile.png");
+        background-size: cover;
+        background-position: center;
     }
     .hero::before {
-        /* Größeres transparentes Fenster, damit der Filter komplett reinpasst */
+        /* Sanfter Top-Gradient — Text oben lesbar, Filter-Bereich unverdeckt sichtbar */
         background: linear-gradient(180deg,
-            rgba(231, 244, 251, 1) 0%,
-            rgba(231, 244, 251, 1) 38%,
-            rgba(231, 244, 251, 0) 46%,
-            rgba(231, 244, 251, 0) 82%,
-            rgba(231, 244, 251, 1) 88%,
-            rgba(231, 244, 251, 1) 100%);
+            rgba(231, 244, 251, 0.95) 0%,
+            rgba(231, 244, 251, 0.78) 28%,
+            rgba(231, 244, 251, 0.35) 48%,
+            transparent 70%);
     }
     .hero-inner {
-        align-items: stretch;
+        align-items: flex-start;
         padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
-        min-height: 90vh;
-    }
-    .hero-content {
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-    }
-    .hero-ctas {
-        margin-top: auto;
-        padding-top: 2rem;
+        padding-bottom: 7rem;
+        min-height: 80vh;
     }
 }
 
