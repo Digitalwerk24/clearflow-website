@@ -396,6 +396,28 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-inner { min-height: auto; padding-bottom: 8rem; }
 }
 
+/* Mobile: Flasche wandert unter den Text, Gradient vertikal — Text bleibt frei */
+@media (max-width: 720px) {
+    .hero {
+        background-position: 60% bottom;
+        background-size: 160% auto;
+    }
+    .hero::before {
+        background: linear-gradient(180deg,
+            rgba(231, 244, 251, 0.98) 0%,
+            rgba(231, 244, 251, 0.94) 38%,
+            rgba(231, 244, 251, 0.55) 60%,
+            rgba(231, 244, 251, 0.1) 80%,
+            transparent 100%);
+    }
+    .hero-inner {
+        align-items: flex-start;
+        padding-top: 2rem;
+        padding-bottom: 18rem;
+        min-height: 0;
+    }
+}
+
 /* ===== Stat-Bar (unter Hero, wie Referenz) ===== */
 .stat-bar {
     background: var(--card);
