@@ -86,9 +86,49 @@
 - URL `https://www.itsclearflow.com/index.html` zur Indexierung eingereicht
 - Dauer: ca. 2-7 Tage
 
+## Änderungen (30.04.2026) – Komplett-Redesign
+
+### ✅ Aufteilung von Single-Page auf 4 Seiten
+- **Vorher:** Eine `index.html` mit allen Sektionen (Hero, Problem, Solution, How, Stats, About, Contact)
+- **Jetzt:** Vier eigenständige Seiten, navigierbar über die Top-Navigation
+  - **Home** (`index.html`) — Hero, Tech-Highlights, Crisis-Daten, How-it-works-Teaser, Story-Cards
+  - **Product** (`product.html`) — 3 Tech-Layer, How-it-works, Spezifikationen, Patent-Block
+  - **About** (`about.html`) — Crisis-Stats, Mission, Founder Manuel Horn, Patent / Revis-1
+  - **Contact** (`contact.html`) — Kontaktformular, Kontakt-Infos, Blog-Teaser
+- Texte und Logos inhaltlich unverändert, nur neu verteilt
+- Backup der alten Single-Page-Version unter `index-old-backup.html`
+- **Status:** Live ✅
+
+### ✅ Neues helles Design im "Observatory"-Stil
+- **Referenz:** Layout & Hintergrund-Stil von gaqo-aura-build (1:1 Hintergrund-Design übernommen)
+- Globales Stylesheet `styles.css` (statt Inline-CSS pro Seite)
+- Globales Skript `main.js` (Reveal-Animationen, Mobile-Menu, Scroll-Verhalten, Smooth-Scroll)
+- **Farb-Palette:** Helles Cream/Grau (`#f3f4f6`), weiße Karten + dunkle Kontrast-Karten (`#0e1218`), ClearFlow-Cyan-Akzent (`#00b8e6`)
+- **Komponenten:** Eyebrows mit Akzent-Punkt, Pill-Buttons, Stat-Bar, CTA-Bands, Footer dunkel
+- **Status:** Live ✅
+
+### ✅ Hero mit echter Erde aus Referenz-Screenshot
+- **Datei:** `Bilder-Website/hero-earth-clean.png` (725×610, aus dem Referenz-PNG `hero-earth.png` extrahiert via Python/PIL)
+- Dunkler Space-Hintergrund (`#060912`) mit subtilen Sternen (CSS), Erde rechts unten platziert
+- Stat-Bar überlappt halb auf Hero / halb auf den hellen Bereich darunter
+- **Status:** Live ✅
+
+### ✅ Sitemap erweitert
+- **Datei:** `sitemap.xml`
+- Neu: `product.html`, `about.html`, `contact.html` (jeweils Priority 0.9)
+- **Status:** Live ✅
+
+### ❌ HD-Earth-Versuch (verworfen)
+- Versuch: Earth-Crop mit 2× Lanczos-Upscale + Unsharp-Mask geschärft (`hero-earth-hd.png`)
+- Problem: Künstliches Sharpening erzeugte Kanten-Artefakte, war nicht wirklich schärfer
+- Resultat: Per `git revert` rückgängig gemacht (Commit `cce3b14`)
+- **Vorschlag für später:** Echte hochauflösende Earth-Quelle (z. B. NASA/ESA in 4K) statt aus Screenshot extrahieren
+
 ## Offene Punkte
 - ⏳ Google-Indexierung abwarten (beantragt am 11.04.2026)
-- 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-q.com` einrichten (noch nicht umgesetzt)
+- 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-1.com` läuft über Formsubmit.co — funktioniert ✅
+- 🌍 Hero-Earth: ggf. höher auflösende Quelle einbauen (NASA / Wasser-Theme)
+- 🔧 Weitere Detail-Anpassungen am Layout & Design (in Folgeterminen)
 
 ## Deployment-Workflow
 - **Immer automatisch committen + pushen** nach jeder Änderung
