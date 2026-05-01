@@ -396,26 +396,27 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-inner { min-height: auto; padding-bottom: 8rem; }
 }
 
-/* Mobile: Reihenfolge Text → Bild → Buttons → Stats */
+/* Mobile: 3 Zonen — Text (solid) / Bild (frei) / Buttons (solid) */
 @media (max-width: 720px) {
     .hero {
-        background-position: 60% 60%;
-        background-size: 150% auto;
+        background-position: 65% 62%;
+        background-size: 165% auto;
     }
     .hero::before {
+        /* Hartbreak-Gradient: Text + Buttons komplett deckend, nur Mitte transparent */
         background: linear-gradient(180deg,
-            rgba(231, 244, 251, 0.97) 0%,
-            rgba(231, 244, 251, 0.92) 28%,
-            rgba(231, 244, 251, 0.45) 48%,
-            rgba(231, 244, 251, 0.25) 70%,
-            rgba(231, 244, 251, 0.8) 90%,
-            rgba(231, 244, 251, 0.95) 100%);
+            rgba(231, 244, 251, 1) 0%,
+            rgba(231, 244, 251, 1) 44%,
+            rgba(231, 244, 251, 0) 52%,
+            rgba(231, 244, 251, 0) 76%,
+            rgba(231, 244, 251, 1) 84%,
+            rgba(231, 244, 251, 1) 100%);
     }
     .hero-inner {
         align-items: stretch;
         padding-top: 1.5rem;
-        padding-bottom: 1.75rem;
-        min-height: 78vh;
+        padding-bottom: 1.5rem;
+        min-height: 90vh;
     }
     .hero-content {
         display: flex;
