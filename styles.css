@@ -396,25 +396,35 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-inner { min-height: auto; padding-bottom: 8rem; }
 }
 
-/* Mobile: Flasche wandert unter den Text, Gradient vertikal — Text bleibt frei */
+/* Mobile: Reihenfolge Text → Bild → Buttons → Stats */
 @media (max-width: 720px) {
     .hero {
-        background-position: 60% bottom;
-        background-size: 160% auto;
+        background-position: 60% 60%;
+        background-size: 150% auto;
     }
     .hero::before {
         background: linear-gradient(180deg,
-            rgba(231, 244, 251, 0.98) 0%,
-            rgba(231, 244, 251, 0.94) 38%,
-            rgba(231, 244, 251, 0.55) 60%,
-            rgba(231, 244, 251, 0.1) 80%,
-            transparent 100%);
+            rgba(231, 244, 251, 0.97) 0%,
+            rgba(231, 244, 251, 0.92) 28%,
+            rgba(231, 244, 251, 0.45) 48%,
+            rgba(231, 244, 251, 0.25) 70%,
+            rgba(231, 244, 251, 0.8) 90%,
+            rgba(231, 244, 251, 0.95) 100%);
     }
     .hero-inner {
-        align-items: flex-start;
+        align-items: stretch;
+        padding-top: 1.5rem;
+        padding-bottom: 1.75rem;
+        min-height: 78vh;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .hero-ctas {
+        margin-top: auto;
         padding-top: 2rem;
-        padding-bottom: 18rem;
-        min-height: 0;
     }
 }
 
