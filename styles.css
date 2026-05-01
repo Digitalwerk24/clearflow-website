@@ -396,20 +396,20 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-inner { min-height: auto; padding-bottom: 8rem; }
 }
 
-/* Mobile: 3 Zonen — Text (solid) / Bild (frei) / Buttons (solid) */
+/* Mobile: 3 Zonen — Text (solid) / Bild (frei und vollständig) / Buttons (solid) */
 @media (max-width: 720px) {
     .hero {
-        background-position: 65% 62%;
-        background-size: 165% auto;
+        background-position: 50% 72%;
+        background-size: 115% auto;
     }
     .hero::before {
-        /* Hartbreak-Gradient: Text + Buttons komplett deckend, nur Mitte transparent */
+        /* Größeres transparentes Fenster, damit der Filter komplett reinpasst */
         background: linear-gradient(180deg,
             rgba(231, 244, 251, 1) 0%,
-            rgba(231, 244, 251, 1) 44%,
-            rgba(231, 244, 251, 0) 52%,
-            rgba(231, 244, 251, 0) 76%,
-            rgba(231, 244, 251, 1) 84%,
+            rgba(231, 244, 251, 1) 38%,
+            rgba(231, 244, 251, 0) 46%,
+            rgba(231, 244, 251, 0) 82%,
+            rgba(231, 244, 251, 1) 88%,
             rgba(231, 244, 251, 1) 100%);
     }
     .hero-inner {
