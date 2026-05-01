@@ -1175,7 +1175,7 @@ section[id] { scroll-margin-top: 80px; }
 
 /* ===== Brand-Slogan-Banner (zwischen CTA und Footer) ===== */
 .brand-slogan {
-    padding: 0 0 clamp(2.5rem, 5vw, 4rem);
+    padding: clamp(2.5rem, 5vw, 4rem) 0;
     text-align: center;
     background: var(--bg);
 }
