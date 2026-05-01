@@ -343,6 +343,12 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     padding: clamp(3rem, 6vw, 5rem) 0 clamp(7rem, 11vw, 9rem);
 }
 .hero-content { max-width: 38rem; }
+.hero-content .eyebrow {
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--text);
+}
 .hero-content h1 {
     margin: 0.5rem 0 1.25rem;
     color: var(--text);
