@@ -212,10 +212,67 @@ Lange Iteration durch mehrere Versuche, bis das Mobile-Hero sauber aussah:
 - **Bug-Fix:** `.cta-band` hatte `margin: clamp(3-5rem) 0` (Top + Bottom) — die Bottom-Margin schuf zusätzlichen Raum oben, sodass der Slogan nicht mittig wirkte. Auf `margin: clamp(3-5rem) 0 0` geändert (nur Top-Margin), Slogan jetzt visuell zentriert
 - **Status:** Live ✅
 
+## Änderungen (01.05.2026 — Abend) — SEO Pillar-Page-Strategie
+
+### ✅ US-Flag-Patch im Footer
+- **Datei:** `Bilder-Website/us-flag-patch.png` (220×116, dunkles Subdued-Patch-Design, Border auto-detected via PIL und entfernt)
+- Position: in `.footer-brand` direkt unter "Engineered with German precision."
+- CSS: 150px breit, `filter: brightness(1.7) contrast(1.15)` für Sichtbarkeit auf dunklem Footer
+- Eingesetzt auf allen 6 Seiten + Blog-Artikel
+- **Status:** Live ✅
+
+### ✅ SEO Pillar 1: Microplastics in Drinking Water (Health/Educational)
+- **Datei:** `microplastics-in-drinking-water.html` (1.939 Wörter)
+- **Target-Keyword:** `microplastics in drinking water`
+- **Sections:** Was sind Microplastics / Wie sie ins Wasser kommen / Bottled vs Tap / Health Risks / Regulations / How to Reduce / Filtration Solutions / 0.2-Micron-Standard / FAQ / Sources
+- Schema.org Article + FAQPage Markup (rich-snippet-fähig)
+- 7 wissenschaftliche Quellen verlinkt (NYU, Columbia, NEJM, WHO etc.)
+- **Status:** Live ✅
+
+### ✅ Pillar-1-Cluster: 4 Long-Tail-Artikel
+1. **`0-2-micron-filtration-explained.html`** (1.156 W.) — Target: "0.2 micron filter"
+2. **`microplastics-bottled-water.html`** (1.184 W.) — Target: "microplastics in bottled water"
+3. **`microplastics-tap-water.html`** (1.076 W.) — Target: "microplastics in tap water"
+4. **`are-microplastics-dangerous.html`** (1.407 W.) — Target: "are microplastics dangerous"
+
+Plus existierender NYU-Artikel als zusätzlicher Cluster: **`blog/microplastics-prostate-cancer-study.html`**
+
+### ✅ SEO Pillar 2: Portable Water Filter Guide (Commercial Intent)
+- **Datei:** `portable-water-filter-guide.html` (2.739 Wörter)
+- **Target-Keyword:** `portable water filter`
+- **Sections:** 6 Filter-Typen / Filtration-Tech / Contaminants / Use-Case-Matrix / Spec-Checklist / NSF-Certifications / Cost-per-Liter / Common Mistakes / FAQ
+- Schema.org Article + FAQPage Markup
+- 3 Daten-Tabellen (Tech-Vergleich, Use-Case-Matching, Cost-per-Liter)
+- **Status:** Live ✅
+
+### ✅ Pillar-2-Cluster: 4 weitere Artikel
+1. **`best-portable-water-filter-2026.html`** (1.344 W.) — Target: "best portable water filter"
+2. **`travel-water-filter.html`** (1.303 W.) — Target: "travel water filter"
+3. **`activated-carbon-vs-ultrafiltration.html`** (1.308 W.) — Target: "activated carbon vs ultrafiltration"
+4. **`water-filter-for-gym-office.html`** (1.270 W.) — Target: "water filter for gym/office"
+
+### ✅ Topic-Cluster-Verlinkung
+- Jeder Cluster verlinkt zu seiner Pillar (Intro-Highlight-Box + Related-Reading-Cards + Back-to-Pillar-Pill)
+- Pillars verlinken auf alle ihre Cluster (Related Reading mit 6 Cards)
+- Pillar 1 ↔ Pillar 2 cross-verlinkt
+- `0-2-micron-filtration-explained` dient beiden Pillars als gemeinsamer Tech-Cluster
+- Alle Cluster verlinken `/product` mit konkretem CTA-Block
+
+### ✅ SEO-Tech-Foundation
+- **Sitemap:** 13 URLs gesamt (vorher 6) — Pillars Priority 0.95, Cluster 0.85, Brand-Pages 0.9-1.0
+- **Schema.org:** Article Markup auf allen neuen Seiten, FAQPage zusätzlich auf beiden Pillars
+- **Meta:** Title-Tags mit Target-Keywords, Meta-Description optimiert, Canonical-Tags, Open Graph, Twitter Card auf allen
+- **Hierarchie:** Saubere H1 → H2 → H3 Struktur, semantische HTML
+
+**Gesamt-Content-Footprint:** ~14.000 Wörter qualitativ hochwertiger Content über 11 SEO-optimierte Seiten
+
 ## Offene Punkte
 - ⏳ Google-Indexierung abwarten (beantragt am 11.04.2026)
+- 🔍 Google Search Console: aktualisierte Sitemap einreichen + URL Inspection für die 11 neuen Seiten ("Request Indexing")
+- 🔗 Backlink-Outreach: Pillars sind ideales Material für Health/Wellness-Blogs, Outdoor-Magazine, Travel-Blogger
 - 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-1.com` läuft über Formsubmit.co — funktioniert ✅
-- 🔧 Weitere Detail-Anpassungen am Layout & Design (in Folgeterminen)
+- 📊 Performance-Monitoring: Rankings für Pillars (1–3 Monate), Long-Tail-Cluster (2–4 Wochen)
+- 🔧 Optionale Pillar #3 (z. B. "Health & Family Hydration" oder "Eco-Conscious Living")
 
 ## Deployment-Workflow
 - **Immer automatisch committen + pushen** nach jeder Änderung
