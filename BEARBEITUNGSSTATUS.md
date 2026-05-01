@@ -174,6 +174,44 @@ Lange Iteration durch mehrere Versuche, bis das Mobile-Hero sauber aussah:
 - Ergänzt die bestehende `googledb90f2b2aeb96592.html` — Property ist damit unter zwei Verifikationen gepflegt
 - **Status:** Live ✅
 
+## Änderungen (01.05.2026 — Nachmittag) — Clean URLs, Slogans, Brand-Banner
+
+### ✅ Clean URLs ohne .html-Endung
+- **Neu:** `vercel.json` mit `cleanUrls: true` und `trailingSlash: false`
+- Alle internen `<a href>`-Links auf saubere Pfade umgestellt (z. B. `product` statt `product.html`) auf index, product, about, contact, blog und Artikel-Seite
+- `sitemap.xml` ebenfalls aktualisiert + `lastmod` auf 2026-05-01
+- Vercel redirected alte `.html`-URLs automatisch — bestehende Backlinks/Indexierung bleiben erhalten
+- **Status:** Live ✅
+
+### ✅ Mobile: Card-Grid-Override + Button-Zentrierung
+- **Bug:** Inline-Style `grid-template-columns: 1fr 1.1fr` im "Simplicity"-Block überschrieb die Mobile-Media-Query — Karten blieben in 2 squished Spalten, "See how it works"-Button lief über den Karten-Rand hinaus
+- **Fix 1:** `!important` auf `.card-grid.cols-2` im Mobile-Breakpoint → 1 Spalte, volle Karten-Breite
+- **Fix 2:** Klasse `.card-feature-dark` auf den dunklen "Snap it on"-Karten ergänzt, CSS zentriert den Inhalt im Mobile-Breakpoint via `text-align: center`
+- **Status:** Live ✅
+
+### ✅ Werbe-Slogan in den Crisis-Block: "Protect what matters most."
+- **Vorher:** "The microplastic crisis is a $50B market problem. We built the solution." — zu Business-fokussiert
+- **Jetzt:** US-amerikanischer Werbe-Slogan
+  - Hauptzeile **"Protect what matters most."** mit jedem Wort in einer US-Nationalfarbe:
+    - "Protect" — Old Glory Red `#b22234`
+    - "what" — Weiß mit dunklem Outline + Schatten (auf hellem BG sichtbar)
+    - "matters" — Old Glory Blue `#3c3b6e`
+    - "most." — Rot (Zyklus wiederholt)
+  - Subline italic *"You. Your family. Every sip."*
+  - Sign-off "— CLEARFLOW" in Cyan-Caps mit Letter-Spacing
+- Eingesetzt auf `index.html` und `about.html`
+- **Verworfen:** Versuch mit horizontalen US-Flag-Streifen DURCH die Buchstaben (war visuell irritierend)
+- **Status:** Live ✅
+
+### ✅ Brand-Slogan-Banner zwischen CTA und Footer
+- **Datei:** alle 4 Seiten (`index`, `product`, `about`, `contact`)
+- Position: zwischen CTA-Band und Footer
+- **Hauptzeile:** "Cleaner water. Stronger families." (fett, dunkel)
+- **Subline:** "MADE IN AMERICA." mit "America" in 2-3-2 Buchstaben-Splits in US-Nationalfarben (`Am` rot / `eri` weiß-outlined / `ca` blau)
+- Heller Cream-Hintergrund (kein Trennstrich), symmetrisches Padding für vertikale Zentrierung
+- **Bug-Fix:** `.cta-band` hatte `margin: clamp(3-5rem) 0` (Top + Bottom) — die Bottom-Margin schuf zusätzlichen Raum oben, sodass der Slogan nicht mittig wirkte. Auf `margin: clamp(3-5rem) 0 0` geändert (nur Top-Margin), Slogan jetzt visuell zentriert
+- **Status:** Live ✅
+
 ## Offene Punkte
 - ⏳ Google-Indexierung abwarten (beantragt am 11.04.2026)
 - 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-1.com` läuft über Formsubmit.co — funktioniert ✅
