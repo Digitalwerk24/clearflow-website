@@ -2,8 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://itsclearflow.com/</loc>
-    <lastmod>2026-04-11</lastmod>
+    <lastmod>2026-04-30</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://itsclearflow.com/product.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itsclearflow.com/about.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://itsclearflow.com/contact.html</loc>
+    <lastmod>2026-04-30</lastmod>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://itsclearflow.com/blog.html</loc>

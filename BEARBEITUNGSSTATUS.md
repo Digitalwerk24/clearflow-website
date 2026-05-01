@@ -51,8 +51,43 @@
 - **Zweck:** SEO-Backlink für revis-1.com
 - **Status:** Live ✅
 
+## Änderungen (11.04.2026)
+
+### ✅ Founder-Bild aktualisiert
+- **Datei:** `founder.jpeg`
+- Neues professionelles Headshot-Foto (Aragon) ersetzt altes Büro-Foto
+- **Status:** Live ✅
+
+### ✅ Manuel Horn & Founder-Rolle verlinkt
+- **Datei:** `index.html`, About-Sektion
+- "Manuel Horn" (h3) und "Founder & CEO" verlinkt auf `https://www.revis-1.com`
+- Hover-Effekt: Opacity-Übergang (0.7) für subtilen Leucht-Effekt
+- **Zweck:** SEO-Backlink für revis-1.com
+- **Status:** Live ✅
+
+### ✅ Logo-Link Fix
+- **Datei:** `index.html`
+- Logo-Link von `href="#"` auf `href="/"` geändert
+- Scroll-Script: Bei `href="#"` wird jetzt sauber nach oben gescrollt ohne `#` in der URL
+- **Status:** Live ✅
+
+### ✅ Google Search Console Verifizierung
+- **Datei:** `googledb90f2b2aeb96592.html`
+- HTML-Verifizierungsdatei für Google Search Console hinzugefügt
+- **Status:** Verifiziert ✅
+
+### ✅ Sitemap & robots.txt
+- **Dateien:** `sitemap.xml`, `robots.txt`
+- Sitemap mit 3 Seiten: Startseite, Blog-Übersicht, Blog-Artikel
+- robots.txt mit Verweis auf Sitemap
+- **Status:** Live ✅
+
+### ⏳ Google-Indexierung beantragt
+- URL `https://www.itsclearflow.com/index.html` zur Indexierung eingereicht
+- Dauer: ca. 2-7 Tage
+
 ## Offene Punkte
-- ⏳ SSL-Zertifikat für `itsclearflow.com` (Vercel automatisch, abwarten)
+- ⏳ Google-Indexierung abwarten (beantragt am 11.04.2026)
 - 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-q.com` einrichten (noch nicht umgesetzt)
 
 ## Deployment-Workflow
