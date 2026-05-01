@@ -343,7 +343,6 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     padding: clamp(3rem, 6vw, 5rem) 0 clamp(7rem, 11vw, 9rem);
 }
 .hero-content { max-width: 38rem; }
-.hero-mobile-product { display: none; } /* nur auf Mobile sichtbar */
 .hero-content .eyebrow {
     font-size: 0.82rem;
     font-weight: 700;
@@ -397,33 +396,36 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-inner { min-height: auto; padding-bottom: 8rem; }
 }
 
-/* Mobile: Bild als echtes <img>-Element zwischen Text und Buttons */
+/* Mobile: 3 Zonen — Text (solid) / Bild (frei) / Buttons (solid) */
 @media (max-width: 720px) {
     .hero {
-        background-image: none;
-        background: linear-gradient(180deg, #e7f4fb 0%, #f3f4f6 100%);
+        background-position: 65% 62%;
+        background-size: 165% auto;
     }
-    .hero::before { display: none; }
+    .hero::before {
+        /* Hartbreak-Gradient: Text + Buttons komplett deckend, nur Mitte transparent */
+        background: linear-gradient(180deg,
+            rgba(231, 244, 251, 1) 0%,
+            rgba(231, 244, 251, 1) 44%,
+            rgba(231, 244, 251, 0) 52%,
+            rgba(231, 244, 251, 0) 76%,
+            rgba(231, 244, 251, 1) 84%,
+            rgba(231, 244, 251, 1) 100%);
+    }
     .hero-inner {
         align-items: stretch;
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
-        min-height: 0;
+        min-height: 90vh;
     }
     .hero-content {
         display: flex;
         flex-direction: column;
         max-width: 100%;
     }
-    .hero-mobile-product {
-        display: block;
-        width: 100%;
-        max-width: 360px;
-        margin: 2.5rem auto 0;
-        border-radius: var(--radius);
-    }
     .hero-ctas {
-        margin-top: 2rem;
+        margin-top: auto;
+        padding-top: 2rem;
     }
 }
 
