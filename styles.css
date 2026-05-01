@@ -304,18 +304,19 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     isolation: isolate;
 }
 
-/* Echte Erde aus Referenz-Bild — rechts unten platziert */
+/* Echte Erde aus Referenz-Bild — hochauflösend, rechts unten platziert */
 .hero::before {
     content: '';
     position: absolute;
-    right: -8%;
-    bottom: -25%;
+    right: -6%;
+    bottom: -15%;
     width: 78%;
-    aspect-ratio: 725 / 610;
-    background: url("Bilder-Website/hero-earth-clean.png") center / cover no-repeat;
+    aspect-ratio: 1450 / 940;
+    background: url("Bilder-Website/hero-earth-hd.png") center / cover no-repeat;
     z-index: 1;
     pointer-events: none;
     filter: drop-shadow(0 30px 80px rgba(0, 100, 180, 0.25));
+    image-rendering: -webkit-optimize-contrast;
 }
 
 /* Sanfter Übergang Hero → heller Bereich darunter */
