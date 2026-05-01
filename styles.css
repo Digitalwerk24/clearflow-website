@@ -292,30 +292,39 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .nav-toggle { display: flex; }
 }
 
-/* ===== Hero — ClearFlow-Produktfoto (Wasser-Splash) ===== */
+/* ===== Hero — Cinematic Background-Video ===== */
 .hero {
     position: relative;
     background: #e7f4fb;
-    background-image:
-        url("Bilder-Website/clearflow-hero.png");
-    background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
     color: var(--text);
     overflow: hidden;
     isolation: isolate;
 }
 
-/* Heller Verlauf links für Text-Lesbarkeit */
+/* Video sitzt rechts, Text links — Flasche dadurch nicht zu groß */
+.hero-video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 62%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Sanfter Übergang vom hellen Text-Bereich ins Video rechts */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg,
-        rgba(231, 244, 251, 0.92) 0%,
-        rgba(231, 244, 251, 0.7) 25%,
-        rgba(231, 244, 251, 0.25) 55%,
-        transparent 80%);
+        rgba(231, 244, 251, 1) 0%,
+        rgba(231, 244, 251, 1) 32%,
+        rgba(231, 244, 251, 0.6) 42%,
+        rgba(231, 244, 251, 0.15) 52%,
+        transparent 60%);
     z-index: 1;
     pointer-events: none;
 }
@@ -396,25 +405,24 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-inner { min-height: auto; padding-bottom: 8rem; }
 }
 
-/* Mobile: extendierter Crop mit Sky oben, Flasche unten — Bild füllt Hero komplett */
+/* Mobile: Video full-bleed (komplette Hero-Breite), Top-Gradient für Text-Lesbarkeit */
 @media (max-width: 720px) {
-    .hero {
-        background-image: url("Bilder-Website/clearflow-hero-mobile.png");
-        background-size: cover;
-        background-position: center 35%;
+    .hero-video {
+        width: 100%;
+        object-position: 75% center;
     }
     .hero::before {
-        /* Subtiler Top-Gradient für Text-Lesbarkeit, Flasche bleibt unten frei */
         background: linear-gradient(180deg,
-            rgba(231, 244, 251, 0.7) 0%,
-            rgba(231, 244, 251, 0.35) 30%,
-            transparent 50%);
+            rgba(231, 244, 251, 0.85) 0%,
+            rgba(231, 244, 251, 0.55) 28%,
+            rgba(231, 244, 251, 0.15) 50%,
+            transparent 70%);
     }
     .hero-inner {
         align-items: flex-start;
         padding-top: 1.5rem;
         padding-bottom: 2rem;
-        min-height: 100vh;
+        min-height: 90vh;
     }
 }
 
