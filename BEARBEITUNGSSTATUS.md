@@ -122,12 +122,61 @@
 - Versuch: Earth-Crop mit 2× Lanczos-Upscale + Unsharp-Mask geschärft (`hero-earth-hd.png`)
 - Problem: Künstliches Sharpening erzeugte Kanten-Artefakte, war nicht wirklich schärfer
 - Resultat: Per `git revert` rückgängig gemacht (Commit `cce3b14`)
-- **Vorschlag für später:** Echte hochauflösende Earth-Quelle (z. B. NASA/ESA in 4K) statt aus Screenshot extrahieren
+
+## Änderungen (01.05.2026) — Hero-Visual + Blog-Redesign + Mobile-Feinschliff
+
+### ✅ Hero-Visual: von Erde zu ClearFlow-Produktfoto, dann zu Cinematic Video
+- **Schritt 1 (Tag-Anfang):** Hero-Erde durch ClearFlow-Produktfoto ersetzt (`Bilder-Website/clearflow-hero.png`, Wasser-Splash mit Flasche). Hero wechselte von dunklem Space-Look zu hellem Cyan/Wasser-Look — passender zum Brand.
+- **Schritt 2 (final):** Statisches Foto durch Cinematic Background-Video ersetzt
+  - **Datei:** `Bilder-Website/clearflow-hero.mp4` (864×496, 1.0 MB)
+  - autoplay, muted, loop, playsinline (iOS-kompatibel), preload auto
+  - Desktop: Video full-bleed, Flasche zentral, horizontaler Gradient (links → rechts) für Text-Lesbarkeit
+  - Mobile: Video full-bleed mit `top: 15%; height: 85%` damit der obere Teil des Filters nicht vom Headline-Text verdeckt wird
+- **Status:** Live ✅
+
+### ✅ Headline-Highlight: "America's" in US-Flaggen-Farben
+- **Datei:** `index.html`, Hero-H1
+- 3-3-3-Aufteilung: `Ame` Old Glory Red (`#b22234`), `ric` Weiß mit dunklem Text-Stroke (sonst auf hellem Hintergrund unsichtbar), `a's` Old Glory Blue (`#3c3b6e`)
+- Apostroph zählt zur dritten Gruppe
+- **Status:** Live ✅
+
+### ✅ Typografie kräftiger
+- **Hero-Eyebrow** "Introducing ClearFlow": font-weight 600 → 700, Größe 0.7 → 0.82rem, Letter-spacing 2.5 → 3px, Farbe muted → text
+- **Stat-Bar-Labels** (Microplastic Reduction / Filtration Precision / Annual Savings / Bottle Compatibility): font-weight 600 → 700, Größe 0.65 → 0.75rem, Farbe text-dim → text
+- **Status:** Live ✅
+
+### ✅ Blog-Bereich auf neues helles Design umgestellt
+- **Dateien:** `blog.html` und `blog/microplastics-prostate-cancer-study.html` komplett neu geschrieben
+- Inline-CSS aus altem Dark-Theme entfernt — nutzen jetzt geteiltes `styles.css` + `main.js`
+- Navigation an die 4-Seiten-Struktur angepasst (Home / Product / About / Blog / Contact)
+- Neue Blog-Komponenten in `styles.css`: Filter-Pills, Featured-Article-Karte, Newsletter-Block (dunkler Kontrast wie CTA-Bands), Artikel-Header, Breadcrumb, Tags, Daten-Tabelle, Zitat, CTA-Block, Quellen-Box, Disclaimer, Back-to-Blog-Pill
+- Inhalt unverändert (Texte 1:1 übernommen)
+- **Status:** Live ✅
+
+### ✅ Mobile-Hero — finale Layout-Iteration
+Lange Iteration durch mehrere Versuche, bis das Mobile-Hero sauber aussah:
+- **Reihenfolge:** Eyebrow → Headline → Subtitle → Video (Flasche sichtbar) → Buttons → Stats
+- `.hero-inner` als Flex-Spalte auf Mobile
+- `.hero-ctas` mit `margin-top: auto` → Buttons rutschen automatisch ans untere Hero-Ende
+- `.hero-ctas` mit `justify-content: center` → Explore + Our story mittig (nicht linksbündig)
+- `.hero-video` mit `top: 15%; height: 85%` → Video startet etwas tiefer, Filter-Deckel ist nicht mehr von der Headline verdeckt
+- Mobile-spezifischer 3-Zonen-Gradient: oben deckend (Text-Bereich), Mitte transparent (Video sichtbar), unten wieder deckend (sauberer Button-Hintergrund)
+- **Status:** Live ✅
+
+### ✅ Hero-Text bündig zum Rest der Seite
+- **Bug:** `.hero-inner` hatte `padding: ... 0 ...` (Shorthand mit horizontalem 0), wodurch das Standard-Container-Padding von 20px auf Mobile überschrieben wurde — Eyebrow / Headline / Subtitle starteten am Viewport-Rand statt bündig zu den Karten
+- **Fix:** Padding-Shorthand durch `padding-top` / `padding-bottom` ersetzt — horizontales Padding kommt jetzt sauber vom `.container`
+- **Status:** Live ✅
+
+### ✅ Zweite Google Search Console Verifikation
+- **Datei:** `googlecf81cbf6a723b28c.html` ins Website-Root gelegt
+- Inhalt: `google-site-verification: googlecf81cbf6a723b28c.html`
+- Ergänzt die bestehende `googledb90f2b2aeb96592.html` — Property ist damit unter zwei Verifikationen gepflegt
+- **Status:** Live ✅
 
 ## Offene Punkte
 - ⏳ Google-Indexierung abwarten (beantragt am 11.04.2026)
 - 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-1.com` läuft über Formsubmit.co — funktioniert ✅
-- 🌍 Hero-Earth: ggf. höher auflösende Quelle einbauen (NASA / Wasser-Theme)
 - 🔧 Weitere Detail-Anpassungen am Layout & Design (in Folgeterminen)
 
 ## Deployment-Workflow
