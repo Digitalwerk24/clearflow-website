@@ -406,6 +406,8 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 /* Mobile: Buttons unter dem Video — Text oben, Video Mitte, Buttons unten */
 @media (max-width: 720px) {
     .hero-video {
+        top: 15%;
+        height: 85%;
         width: 100%;
         object-position: 75% center;
     }
@@ -433,6 +435,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     .hero-ctas {
         margin-top: auto;
         padding-top: 2rem;
+        justify-content: center;
     }
 }
 
