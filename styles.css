@@ -1175,10 +1175,9 @@ section[id] { scroll-margin-top: 80px; }
 
 /* ===== Brand-Slogan-Banner (zwischen CTA und Footer) ===== */
 .brand-slogan {
-    padding: clamp(2.5rem, 5vw, 4rem) 0;
+    padding: 0 0 clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     background: var(--bg);
-    border-top: 1px solid var(--card-border);
 }
 .brand-slogan .slogan-main {
     font-size: clamp(1.4rem, 2.8vw, 1.95rem);
