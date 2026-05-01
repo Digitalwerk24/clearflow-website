@@ -977,10 +977,11 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .footer-col a:hover { color: var(--text-on-dark); }
 
 .footer-flag {
-    width: 64px;
+    width: 150px;
     height: auto;
-    margin-top: 1.25rem;
-    opacity: 0.9;
+    margin: 1rem 0 0;
+    opacity: 1;
+    filter: brightness(1.7) contrast(1.15);
     border-radius: 3px;
     display: block;
 }
