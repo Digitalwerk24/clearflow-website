@@ -1706,6 +1706,58 @@ section[id] { scroll-margin-top: 80px; }
     line-height: 1.5;
     margin-bottom: 0.4rem;
 }
+.article-sources li a {
+    color: var(--accent-deep);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color var(--transition);
+}
+.article-sources li a:hover { color: var(--accent); }
+
+/* ===== Trust-Pills — Authority-Badges für Quellen-Organisationen ===== */
+.source-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+    margin: 1.25rem 0 0.5rem;
+}
+.source-pills .source-pills-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-right: 0.25rem;
+}
+.source-pills .source-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.75rem;
+    background: var(--card);
+    border: 1px solid var(--card-border-strong);
+    border-radius: var(--radius-pill);
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.4px;
+    box-shadow: 0 1px 2px rgba(15, 23, 32, 0.04);
+    transition: border-color var(--transition), color var(--transition), transform var(--transition);
+}
+.source-pills .source-pill:hover {
+    color: var(--accent-deep);
+    border-color: var(--accent);
+    transform: translateY(-1px);
+}
+.source-pills .source-pill.dot::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 0.45rem;
+    box-shadow: 0 0 0 3px var(--accent-glow);
+}
 
 .article-disclaimer {
     margin-top: 2rem;

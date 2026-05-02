@@ -266,12 +266,46 @@ Plus existierender NYU-Artikel als zusätzlicher Cluster: **`blog/microplastics-
 
 **Gesamt-Content-Footprint:** ~14.000 Wörter qualitativ hochwertiger Content über 11 SEO-optimierte Seiten
 
+## Änderungen (02.05.2026) — SEO-Phase 2 Operativ-Pläne
+
+### ✅ GSC-Indexierungsplan dokumentiert
+- **Datei:** `SEO_INDEXIERUNG_GSC.md`
+- Schritt-für-Schritt-Anleitung: Sitemap-Submit, URL-Inspection für alle 11 neuen Pillars/Cluster
+- Tag-1- und Tag-2-Liste (GSC-Kontingent: ~10 Anfragen/Tag)
+- Wöchentliches Tracking-Schema, Bing Webmaster Tools als Bonus
+- **Status:** Plan fertig, Ausführung in GSC steht aus
+
+### ✅ Backlink-Outreach-Plan dokumentiert
+- **Datei:** `SEO_BACKLINK_OUTREACH.md`
+- 4 Bucket-Strategie (Health/Wellness, Outdoor/Travel, Family, Founder/Made-in-America)
+- 60 Ziel-Outlets vorgeschlagen, 4 E-Nachrichten-Templates auf Englisch (Pitch + Follow-Up)
+- HARO/Connectively-Workflow + Reddit-Etikette-Guide
+- 12-Wochen-Sprint-Plan mit KPIs (Backlinks, DR-Wachstum, Pillar-Rankings)
+- **Status:** Plan fertig, Ausführung steht aus
+
+### ✅ Bucket-A-Outlet-Recherche (Health/Wellness)
+- **Datei:** `SEO_OUTREACH_BUCKET_A.md`
+- 15 Outlets mit Steckbriefen (DR, Pitch-Pfad, Editor-Recherche-Strategie, Topic-Hooks)
+- Top-4-Priorität: Mindbodygreen, Well+Good, Consumer Reports, EWG
+- Direkter Today-Workflow (5 Pitches in 60–75 Min)
+- Anti-Pattern-Liste
+- **Status:** Liste fertig + Top-4-Editor-E-Mails via Hunter.io verifiziert (siehe SEO_TRACKING.md)
+
+### ✅ Editor-E-Mails recherchiert (Hunter.io, browser-basiert via Claude)
+- **Datei:** `SEO_TRACKING.md`
+- **Mindbodygreen:** Sarah Regan (`sarah.regan@mindbodygreen.com`) — Editor — ✅ Valid
+- **Well+Good:** Chloe Metzger (`chloe.metzger@wellandgood.com`) — Deputy Editor — ✅ Valid
+- **EWG:** Alex Formuzis (`alex@ewg.org`) — Director of Communications — ✅ Valid
+- **Consumer Reports:** keine Treffer in Hunter (Non-Profit) → Workaround via Tipline-Form + LinkedIn-DM dokumentiert
+- E-Mail-Pattern für alle 3 Outlets erfasst → Backup-Kontakte ohne weitere Credit-Verschwendung ableitbar
+- Hunter-Credits: 4 von 50 verbraucht, 46 verbleiben für Bucket B
+- **Status:** 3 Pitch-fertige Kontakte + 1 Tipline-Workaround
+
 ## Offene Punkte
-- ⏳ Google-Indexierung abwarten (beantragt am 11.04.2026)
-- 🔍 Google Search Console: aktualisierte Sitemap einreichen + URL Inspection für die 11 neuen Seiten ("Request Indexing")
-- 🔗 Backlink-Outreach: Pillars sind ideales Material für Health/Wellness-Blogs, Outdoor-Magazine, Travel-Blogger
+- 🔍 **GSC:** Schritte aus `SEO_INDEXIERUNG_GSC.md` ausführen (Sitemap einreichen + 11 URLs zur Indexierung beantragen)
+- 🔗 **Outreach:** Sprint 1 aus `SEO_BACKLINK_OUTREACH.md` starten (Outlet-Recherche + hunter.io)
+- 📊 **Tracking:** `SEO_TRACKING.md` anlegen sobald erste Impressionen in GSC sichtbar
 - 📧 Kontaktformular: E-Mail-Weiterleitung an `info@revis-1.com` läuft über Formsubmit.co — funktioniert ✅
-- 📊 Performance-Monitoring: Rankings für Pillars (1–3 Monate), Long-Tail-Cluster (2–4 Wochen)
 - 🔧 Optionale Pillar #3 (z. B. "Health & Family Hydration" oder "Eco-Conscious Living")
 
 ## Deployment-Workflow
