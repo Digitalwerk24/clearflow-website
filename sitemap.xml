@@ -61,6 +61,12 @@
     <priority>0.70</priority>
   </url>
   <url>
+    <loc>https://itsclearflow.com/clear-flow-product-guide</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
     <loc>https://itsclearflow.com/microplastics-bottled-water</loc>
     <lastmod>2026-05-03</lastmod>
     <changefreq>monthly</changefreq>
