@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://itsclearflow.com</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
   </url>
@@ -37,6 +37,12 @@
     <priority>0.70</priority>
   </url>
   <url>
+    <loc>https://itsclearflow.com/blog/can-you-see-microplastics-in-water</loc>
+    <lastmod>2026-05-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
     <loc>https://itsclearflow.com/blog/how-many-microplastics-in-bottled-water</loc>
     <lastmod>2026-05-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -62,7 +68,7 @@
   </url>
   <url>
     <loc>https://itsclearflow.com/clear-flow-product-guide</loc>
-    <lastmod>2026-05-04</lastmod>
+    <lastmod>2026-05-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
