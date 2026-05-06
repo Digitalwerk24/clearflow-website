@@ -80,6 +80,24 @@
                 </div>
             </div>
 
+            <a href="blog/are-microplastics-in-water-bad-for-you" class="featured-article" data-reveal data-category="health">
+                <div class="featured-img">
+                    <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=1200&q=80" alt="Glass of clear drinking water — are microplastics in water bad for you?">
+                </div>
+                <div class="featured-content">
+                    <span class="featured-badge">New Article</span>
+                    <h2>Are Microplastics in Water Bad for You? What Research Says</h2>
+                    <p>Researchers have found microplastics in human blood, lungs and placentas. The long-term health effects are still being studied, but exposure is real and measurable — and simple changes meaningfully reduce intake.</p>
+                    <div class="article-meta">
+                        <span class="category">Health</span>
+                        <span class="dot"></span>
+                        <span>4 min read</span>
+                        <span class="dot"></span>
+                        <span>May 6, 2026</span>
+                    </div>
+                </div>
+            </a>
+
             <a href="blog/microplastics-prostate-cancer-study" class="featured-article" data-reveal data-category="health">
                 <div class="featured-img">
                     <img src="Bilder-Website/microplastic-petri-dish.jpeg" alt="Microplastic particles in a petri dish — microscopic contamination found in human tissue">
@@ -167,7 +185,7 @@
         /* Kategorie-Filter */
         (function () {
             var buttons = document.querySelectorAll('.filter-btn');
-            var featured = document.querySelector('.featured-article');
+            var featuredArticles = document.querySelectorAll('.featured-article');
             var cards = document.querySelectorAll('.article-card');
 
             buttons.forEach(function (btn) {
@@ -176,9 +194,9 @@
                     btn.classList.add('active');
 
                     var filter = btn.getAttribute('data-filter');
-                    if (featured) {
+                    featuredArticles.forEach(function (featured) {
                         featured.style.display = (filter === 'all' || featured.getAttribute('data-category') === filter) ? '' : 'none';
-                    }
+                    });
                     cards.forEach(function (card) {
                         card.style.display = (filter === 'all' || card.getAttribute('data-category') === filter) ? '' : 'none';
                     });
