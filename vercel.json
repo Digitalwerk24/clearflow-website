@@ -12,6 +12,13 @@
       ],
       "destination": "https://itsclearflow.com/:path*",
       "permanent": true
-    }
+    },
+    { "source": "/bottled-water-in-america", "destination": "/blog/bottled-water-in-america", "permanent": true },
+    { "source": "/bottled-water-usa-guide", "destination": "/blog/bottled-water-usa-guide", "permanent": true },
+    { "source": "/clear-flow-product-guide", "destination": "/blog/clear-flow-product-guide", "permanent": true },
+    { "source": "/microplastics-science-research", "destination": "/blog/microplastics-science-research", "permanent": true },
+    { "source": "/on-the-go-microplastic-filters", "destination": "/blog/on-the-go-microplastic-filters", "permanent": true },
+    { "source": "/on-the-go-water-filtration", "destination": "/blog/on-the-go-water-filtration", "permanent": true },
+    { "source": "/reducing-plastic-exposure", "destination": "/blog/reducing-plastic-exposure", "permanent": true }
   ]
 }
