@@ -145,12 +145,13 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" action="https://formsubmit.co/info@revis-1.com" method="POST" data-reveal data-reveal-delay="2">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://www.itsclearflow.com/thanks.html">
-                    <input type="hidden" name="_subject" value="New ClearFlow Inquiry">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="text" name="_honey" style="display:none">
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" data-reveal data-reveal-delay="2">
+                    <!-- Web3Forms (FormSubmit.co ersetzt am 2026-05-16 wegen Service-Ausfall) -->
+                    <input type="hidden" name="access_key" value="3618f448-92db-4831-95fe-bbd739b2f438">
+                    <input type="hidden" name="subject" value="New ClearFlow Inquiry">
+                    <input type="hidden" name="from_name" value="ClearFlow Contact Form">
+                    <input type="hidden" name="redirect" value="https://itsclearflow.com/thanks">
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
 
                     <div class="form-group">
                         <label for="name">Full Name</label>
