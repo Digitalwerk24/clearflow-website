@@ -13,6 +13,7 @@
       "destination": "https://itsclearflow.com/:path*",
       "permanent": true
     },
+    { "source": "/0-2-micron-filtration-explained", "destination": "/2-micron-filtration-explained", "permanent": true },
     { "source": "/bottled-water-in-america", "destination": "/blog/bottled-water-in-america", "permanent": true },
     { "source": "/bottled-water-usa-guide", "destination": "/blog/bottled-water-usa-guide", "permanent": true },
     { "source": "/clear-flow-product-guide", "destination": "/blog/clear-flow-product-guide", "permanent": true },
